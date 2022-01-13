@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leader Board</title>
+    <!-- font awesome  -->
+    <script src="https://kit.fontawesome.com/0bcd4aa35c.js" crossorigin="anonymous"></script>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        /* fonts  */
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Josefin+Sans:ital,wght@0,300;0,400;1,400&family=Luxurious+Roman&family=Merriweather:wght@400;700;900&family=Poppins:wght@400;500&display=swap');
+
+        /* common  */
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+
+        body {
+            font-family: 'Anton', sans-serif;
+            font-family: 'Josefin Sans', sans-serif;
+            font-family: 'Luxurious Roman', cursive;
+            font-family: 'Merriweather', serif;
+            font-family: 'Poppins', sans-serif;
+            background-color: #E5E5E5;
+        }
+
+        .container {
+
+            background-color: #ffff;
+            padding: 30px;
+            width: 870px;
+            margin-top: 20px;
+
+        }
+
+        .top-players {
+            margin-bottom: 30px;
+        }
+
+        hr {
+            border: 1px solid #d1d1d1;
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            color: #562eff;
+            font-size: 24px;
+            margin-top: 3px;
+
+        }
+
+        /* top players style */
+        .players {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-row-gap: 30px
+        }
+
+        .player img {
+            width: 56px;
+            height: 56px;
+        }
+
+        .player {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .player-name {
+            margin-left: 16px;
+            font-size: 18px;
+        }
+
+        /* -------------top blog styles-----------------------------
+        ----------------------------------------- */
+
+
+        .blog .thumbnail img {
+            width: 177px;
+            height: 177px;
+        }
+
+        .blog {
+            display: flex;
+            margin-top: 20px;
+
+        }
+
+        .blog-info {
+            margin-left: 16px;
+        }
+
+        .blog-title {
+            font-size: 20px;
+        }
+
+        .blogs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px
+        }
+
+        .blog-author {
+            color: #9f9f9f;
+        }
+
+        .blog-author a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #562eff;
+        }
+
+        /* Latest courses  */
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 24px;
+        }
+
+        .course .course-banner img {
+            width: 224px;
+            height: 104px;
+        }
+
+        .fa-star.filled {
+
+            color: coral;
+        }
+
+        .fa-star.empty {
+            color: grey;
+        }
+
+        .course-info {
+            display: flex;
+            font-size: 12px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        span {
+            margin-right: 20px;
+        }
+
+        /* Media Queri  */
+        @media only screen and (max-width:688px) {
+            .container {
+                width: 100%;
+            }
+
+            .players,
+            .blogs,
+            .courses {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .player,
+            .blog {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <main>
+            <!-- top players and top blogs -->
+            <section class="container">
+                <div class="top-players">
+                    <div class="section-title">
+                        <h2>Top players</h2>
+                    </div>
+
+
+                    <div class="players">
+
+                        <div class="player">
+                            <img src="images/players/player-1.png" alt="">
+                            <h3 class="player-name">Top players</h3>
+                        </div>
+                        <div class="player">
+                            <img src="images/players/player-2.png" alt="">
+                            <h3 class="player-name">Top players</h3>
+                        </div>
+                        <div class="player">
+                            <img src="images/players/player-3.png" alt="">
+                            <h3 class="player-name" class>Top players</h3>
+                        </div>
+                        <div class="player">
+                            <img src="images/players/player-4.png" alt="">
+                            <h3 class="player-name">Top players</h3>
+                        </div>
+                        <div class="player">
+                            <img src="images/players/player-5.png" alt="">
+                            <h3 class="player-name">Top players</h3>
+                        </div>
+                        <div class="player">
+                            <img src="images/players/player-6.png" alt="">
+                            <h3 class="player-name">Top players</h3>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="top-blogs">
+                    <h2 class="section-title">Top blogs</h2>
+                    <div class="blogs">
+                        <article class="blog">
+                            <div class="thumbnail">
+                                <img src="images/blogs/blog-1.png" alt="">
+                            </div>
+                            <div class="blog-info">
+                                <h3 class="blog-title">13 of My FavoriteUI/UX Goodies</h3>
+                                <p class="blog-author">by <a href="">Danny Sapio</a></p>
+                            </div>
+                        </article>
+                        <article class="blog">
+                            <div class="thumbnail">
+                                <img src="images/blogs/blog-2.png" alt="">
+                            </div>
+                            <div class="blog-info">
+                                <h3 class="blog-title">UI cheat sheet: list vs grids</h3>
+                                <p class="blog-author">by <a href="">Tess Gadd</a></p>
+                            </div>
+                        </article>
+                        <article class="blog">
+                            <div class="thumbnail">
+                                <img src="images/blogs/blog-3.png" alt="">
+                            </div>
+                            <div class="blog-info">
+                                <h3 class="blog-title">7 typography tips for interface design</h3>
+                                <p class="blog-author">by <a href="">Ferdinand Vogler</a></p>
+                            </div>
+                        </article>
+                        <article class="blog">
+                            <div class="thumbnail">
+                                <img src="images/blogs/blog-4.png" alt="">
+                            </div>
+                            <div class="blog-info">
+                                <h3 class="blog-title">Your logo is copied</h3>
+                                <p class="blog-author">by <a href="">Jeremiah Lam</a></p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+            </section>
+            <!-- Latest courses  -->
+
+            <section class="container">
+                <h2 class="section-title">Latest Courses</h2>
+                <div class="courses">
+                    <div class="course">
+                        <div class="course-detail">
+                            <div class="course-banner">
+                                <img src="images/courses/course-1.png" alt="">
+                                <h3 class="course-title">React - The Complete
+                                    Guide 2020</h3>
+                                <p class="course-author">Reed Krakoff</p>
+
+                                <div class="course-info">
+                                    <div>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star empty"></i>
+                                    </div>
+                                    <p>4.5</p>
+                                    <div class="course-duration">
+                                        <i class="far fa-clock"></i>
+                                        01:30hr
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="course">
+                        <div class="course-detail">
+                            <div class="course-banner">
+                                <img src="images/courses/course-2.png" alt="">
+                                <h3 class="course-title">React - The Complete
+                                    Guide 2020</h3>
+                                <p class="course-author">Reed Krakoff</p>
+
+                                <div class="course-info">
+                                    <div>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star empty"></i>
+                                    </div>
+                                    <p>4.5</p>
+                                    <div class="course-duration">
+                                        <i class="far fa-clock"></i>
+                                        01:30hr
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="course">
+                        <div class="course-detail">
+                            <div class="course-banner">
+                                <img src="images/courses/course-3.png" alt="">
+                                <h3 class="course-title">React - The Complete
+                                    Guide 2020</h3>
+                                <p class="course-author">Reed Krakoff</p>
+
+                                <div class="course-info">
+                                    <div>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star empty"></i>
+                                    </div>
+                                    <p><span>4.5</span></p>
+                                    <div class="course-duration">
+                                        <i class="far fa-clock"></i>
+                                        01:30hr
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </header>
+    <!-- header end -->
+
+</body>
+
+</html>
